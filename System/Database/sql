@@ -1,0 +1,17 @@
+CREATE DATABASE tour_ease;
+USE tour_ease;
+
+CREATE TABLE categories (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100)
+);
+
+CREATE TABLE places (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  category_id INT,
+  distance VARCHAR(50),
+  description TEXT,
+  FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
