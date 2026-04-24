@@ -37,12 +37,7 @@
             img{
               margin-left: 60%;
             }
-            .myDiv {
-                text-align: center; 
-                padding: 30px;
-                
-               
-            }
+           
 
             h2{
                 color: blue;
@@ -53,10 +48,45 @@
             }
             footer{
                 background-color: #00ABd1;
-            }
+                margin: 0;
+                padding-bottom: 40px;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px 0;
+                        }
            
             .banner{
                 height: 100%;
                 width: 100%;
                
             }
+            .places-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+                }
+
+                .place-card {
+                background: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                width: 300px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+
+                .place-card img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+                }
+
+                /* Responsive for smaller screens */
+                @media (max-width: 768px) {
+                .place-card {
+                    width: 100%;
+                }
+                }

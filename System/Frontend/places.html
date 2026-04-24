@@ -18,7 +18,26 @@
                           <li><a href="Signin.html">login</a></li>
             </ul>     
         </header>
-        
+        <div class="places-container">
+            <?php
+            include 'db_connect.php';
+            $result = $conn->query("SELECT * FROM Places ORDER BY rating DESC");
+
+            while($row = $result->fetch_assoc()) {
+                echo "<div class='place-card'>";
+                echo "<img src='".$row['imageURL']."' alt='".$row['name']."'>";
+                echo "<h2>".$row['name']."</h2>";
+                echo "<p>".$row['location']."</p>";
+                echo "<p>".$row['description']."</p>";
+                echo "<p>Price: ".$row['price']."</p>";
+                echo "<p>Rating: ".$row['rating']."</p>";
+                echo "</div>";
+            }
+            $conn->close();
+            ?>
+</div>
+
+
 
 
          <footer>
